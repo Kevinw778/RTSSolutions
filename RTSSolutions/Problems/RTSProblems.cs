@@ -70,6 +70,7 @@ namespace RTSSolutions.Problems
             return newFront + newEnd;
         }
 
+        #region " Testing "
         public static void TestAboveBelow()
         {
             var nums = new List<int>() { 1, 2, 3, 4, 5, 6 };
@@ -93,6 +94,12 @@ namespace RTSSolutions.Problems
             Console.WriteLine(origStr);
 
             Console.WriteLine(rotatedString);
+        }
+        #endregion
+
+        public static void RotateString(string str, int rotationAmount)
+        {
+            Console.WriteLine((str.Substring(rotationAmount % str.Length) + str.Substring(0, rotationAmount % str.Length)));
         }
     }
 }
